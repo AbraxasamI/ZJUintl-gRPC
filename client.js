@@ -1,8 +1,8 @@
 /*
  * @Author: Laphets
  * @Date: 2018-04-22 00:42:03
- * @Last Modified by: Laphets
- * @Last Modified time: 2018-04-30 15:47:51
+ * @Last Modified by: Armour
+ * @Last Modified time: 2018-05-06 01:50:32 (PDT)
  */
 
 const PROTO_PATH = __dirname + '/protos/zju_intl.proto';
@@ -17,7 +17,7 @@ const user = require('./config').test_user;
 
 
 // Code for connect test
-// client.connect_test({name: 'lapehts'}, (err, response) => {
+// client.connectTest({name: 'lapehts'}, (err, response) => {
 //     if (err) {
 //         console.log(err);
 //     } else {
@@ -25,7 +25,7 @@ const user = require('./config').test_user;
 //     }
 // });
 
-//Code for get course(time table)
+// Code for get course(time table)
 client.getCourse({ username: user.username, password: user.password }, (err, response) => {
     if (err) {
         console.log(err);
@@ -34,7 +34,7 @@ client.getCourse({ username: user.username, password: user.password }, (err, res
     }
 })
 
-// client.getBBGradeList({ username: user.username, password: user.password }, (err, response) => {
+// client.getBbGradeList({ username: user.username, password: user.password }, (err, response) => {
 //     if (err) {
 //         console.log(err);
 //     } else {
@@ -42,7 +42,7 @@ client.getCourse({ username: user.username, password: user.password }, (err, res
 //     }
 // });
 
-// client.getBBCertainGrade({ username: user.username, password: user.password, courseid: user.courseid }, (err, response) => {
+// client.getBbCertainGrade({ username: user.username, password: user.password, courseid: user.courseid }, (err, response) => {
 //     if (err) {
 //         console.log(err);
 //     } else {

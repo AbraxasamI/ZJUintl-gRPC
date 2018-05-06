@@ -1,8 +1,8 @@
 /*
  * @Author: Laphets
  * @Date: 2018-04-25 00:13:41
- * @Last Modified by: Laphets
- * @Last Modified time: 2018-04-27 22:45:37
+ * @Last Modified by: Armour
+ * @Last Modified time: 2018-05-06 01:42:08 (PDT)
  */
 
 const PROTO_PATH = __dirname + '/protos/zju_intl.proto';
@@ -12,11 +12,11 @@ let protoDescriptor = grpc.load(PROTO_PATH);
 let zjuintl = protoDescriptor.zjuintl;
 
 /**
- * connect_test resolver
+ * connectTest resolver
  * @param {*} call
  * @param {*} callback
  */
-const connect_test = (call, callback) => {
+const connectTest = (call, callback) => {
     callback(null, {message: `Hello ${call.request.name}. You've successfully connect to our service~`});
 }
 
@@ -94,11 +94,11 @@ const getBBCertainGrade = (call, callback) => {
  */
 const getServer = () => {
     let server = new grpc.Server();
-    server.addProtoService(zjuintl.ZJUintl.service, {
+    server.addService(zjuintl.ZJUintl.service, {
         getCourse: getCourse,
-        connect_test: connect_test,
-        getBBGradeList: getBBGradeList,
-        getBBCertainGrade: getBBCertainGrade
+        connectTest: connectTest,
+        getBbGradeList: getBBGradeList,
+        getBbCertainGrade: getBBCertainGrade
     });
     return server;
 }

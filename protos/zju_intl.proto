@@ -3,13 +3,23 @@ syntax = "proto3";
 package zjuintl;
 
 service ZJUintl {
-    rpc connect_test(Infosent) returns (Infoback) {}    
-    rpc getCourse(User) returns (Courses) {}
-    rpc getBBGradeList(User) returns (BBGradeList) {}
-    rpc getBBCertainGrade(BBGradeUser) returns (BBGradeItemList) {}
+    rpc ConnectTest(Infosent) returns (Infoback) {}
+    rpc GetBBGradeList(User) returns (BBGradeList) {}
+    rpc GetBBCertainGrade(BBGradeUser) returns (BBGradeItemList) {}
+    rpc GetCourse(User) returns (Courses) {}
 }
 
-//rpc => getBBGradeList
+// rpc => ConnectTest
+message Infosent {
+    string name = 1;
+}
+
+message Infoback {
+    string status = 1;
+    string message = 2;
+}
+
+// rpc => GetBBGradeList
 message BBGradeList {
     string status = 1;
     repeated BBCourseitem courses = 2;
@@ -21,34 +31,24 @@ message BBCourseitem {
     string courseid = 3;
 }
 
-//rpc => getBBCertainGrade
+// rpc => GetBBCertainGrade
 message BBGradeUser {
     string username = 1;
     string password = 2;
     string courseid = 3;
 }
+
 message BBGradeItemList {
     string status = 1;
     repeated BBGradeItem items = 2;
 }
+
 message BBGradeItem {
     string name = 1;
     string grade = 2;
 }
 
-
-//rpc => connect_test
-message Infosent {
-    string name = 1;
-}
-
-message Infoback {
-    string status = 1;
-    string message = 2;
-}
-
-
-//rpc => getCourse
+// rpc => GetCourse
 message User {
     string username = 1;
     string password = 2;
@@ -71,6 +71,7 @@ message Course {
     repeated string place = 9;
     repeated Time time = 10;
 }
+
 message Time {
     int32 startTimeHour = 1;
     int32 startTimeMinute = 2;
@@ -81,6 +82,7 @@ message Time {
     int32 day = 7;
     string desc = 8;
 }
+
 message Week {
     string type = 1;
     repeated int32 weeks = 2;

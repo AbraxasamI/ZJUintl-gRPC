@@ -22,7 +22,7 @@ vim config.js
 
 ## Endponit Lists
 
-1. **Connect_test** - Test whether you can connect to our sevice.
+1. **connectTest** - Test whether you can connect to our sevice.
 
 ```js
 Accept{
@@ -37,7 +37,7 @@ Return{
 }
 ```
 
-1. **getCourse** - Get the course list and time table from *PeopleSoft*
+2. **getCourse** - Get the course list and time table from *PeopleSoft*
 
 ```js
 Accept{
@@ -55,7 +55,7 @@ Return{
 }
 ```
 
-1. **getBBGradeList** - Get the course list with a sum grade from *BlackBoard*
+3. **getBbGradeList** - Get the course list with a sum grade from *BlackBoard*
 
 ```js
 Accept{
@@ -73,7 +73,7 @@ Return{
 }
 ```
 
-1. **getBBCertainGrade** - Get detail grade for one certain course from *BalckBoard*
+4. **getBbCertainGrade** - Get detail grade for one certain course from *BalckBoard*
 
 ```js
 Accept{

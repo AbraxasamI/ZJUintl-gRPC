@@ -41,8 +41,8 @@ Return{
 
 ```js
 Accept{
-    username: String   //ZJUid
-    password: String   //Password corresponding to that ZJUid
+    username: String   // ZJUid
+    password: String   // Password corresponding to that ZJUid
 }
 ```
 
@@ -73,7 +73,7 @@ Return{
 }
 ```
 
-4. **getBbCertainGrade** - Get detail grade for one certain course from *BalckBoard*
+4. **getBbCertainGrade** - Get detail grade for one certain course from *BlackBoard*
 
 ```js
 Accept{

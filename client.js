@@ -33,7 +33,7 @@ client.getCourse({ username: user.username, password: user.password }, (err, res
         console.log(response);
     }
 })
-
+//
 // client.getBbGradeList({ username: user.username, password: user.password }, (err, response) => {
 //     if (err) {
 //         console.log(err);
